@@ -1,8 +1,0 @@
-#EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-ALLOW-CACHE:NO
-#EXT-X-MEDIA-SEQUENCE:0
-#EXT-X-TARGETDURATION:30
-#EXTINF:30, no desc
-
-https://firebasestorage.googleapis.com/v0/b/ip-tv-1312.appspot.com/o/MOVIES%2FHereditary.2018.1080p.BluRay.Hindi-English.x265.ESubs-Vegamovies.to.mkv?alt=media&token=1e30e399-2b05-4bb3-b0f1-bf44ddabf56f
