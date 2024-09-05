@@ -21,11 +21,3 @@ https://firebasestorage.googleapis.com/v0/b/ip-tv-1312.appspot.com/o/MOVIES%2FMo
 #EXTINF: -1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/3/31/Ghostbusters_%282024%29_poster.jpg" tvg-logo-small="https://upload.wikimedia.org/wikipedia/en/3/31/Ghostbusters_%282024%29_poster.jpg", Ghostbusters: Frozen Empire (2024)
 #EXTGRP:TV
 https://pub-72e9bbf18fb0453f93911f5490ddab0a.r2.dev/GhostBusters-Frozen.Empire.2024.1080p.HDRip.Hindi.Clean.x264.1XBET.Vegamovies.To.mkv
-
-#EXTINF: -1 tvg-id="MaxMiddleEast.in" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Sony_Max_HD.png", Sony MAX HD
-#EXTGRP:TV
-https://dai.google.com/linear/hls/event/UcjHNJmCQ1WRlGKlZm73QA/master.m3u8
-
-#EXTINF: -1 tvg-id="SonyPix.in" tvg-logo="https://i.imgur.com/8ZIyYyM.png", Sony Pix HD
-#EXTGRP:TV
-https://dai.google.com/linear/hls/event/x7rXWd2ERZ2tvyQWPmO1HA/master.m3u8
