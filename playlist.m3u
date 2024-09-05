@@ -1,23 +1,5 @@
 #EXTM3U 
 
-#EXTINF: 10 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyPAd5ErGCteQA3ymlaPsRvsCRsSN27O9dQAsUUfTsg&s", Hereditary 2018
+#EXTINF: 10 tvg-logo="IMAGE_LINK", FILE_NAME
 #EXTGRP:TV
-https://firebasestorage.googleapis.com/v0/b/ip-tv-1312.appspot.com/o/MOVIES%2FHereditary.2018.1080p.BluRay.Hindi-English.x265.ESubs-Vegamovies.to.mkv?alt=media&token=1e30e399-2b05-4bb3-b0f1-bf44ddabf56f
-
-#EXTINF: 10 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRatQ0jA5ItyQizbewLN_uTlFdTHO353-kewHXZP7mXjDbNkyJ-1dPkreESNT2qdm9lMvQ&usqp=CAU", Yodha 20224
-#EXTGRP:TV
-https://firebasestorage.googleapis.com/v0/b/ip-tv-1312.appspot.com/o/MOVIES%2FYodha.2024.720p.AMZN.WEB-DL.DDP5.1.x264.Vegamovies.to.mkv?alt=media&token=3c8c0a8d-98c0-419a-8e2a-e28b59526d17
-
-#EXTINF: 10 tvg-logo="https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234087/KOTPOTA_1SHT_DIGITAL_sRGB_KA_PROXIMUS_V2.jpg", Kingdom of the Planet of the Apes 2024
-#EXTGRP:TV
-https://pub-e0d3f155f1ec478c8dc24719ab956122.r2.dev/Kingdom.of.the.Planet.of.the.Apes.2024.1080p.HDCAMRip.HINDI.DUB.1XBET.Vegamovies.To.mkv
-
-#EXTINF: 10 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReJkPYLItzJ-RFBEBNj0EsqfNu4uf_oMd9LuJvGhvRWA&s" tvg-logo-small="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReJkPYLItzJ-RFBEBNj0EsqfNu4uf_oMd9LuJvGhvRWA&s", Monkey Man (2024)
-#EXTGRP:TV
-https://firebasestorage.googleapis.com/v0/b/ip-tv-1312.appspot.com/o/MOVIES%2FMonkey.Man.2024.1080p.WebDl.English.Esubs.webm?alt=media&token=89afb8aa-d2c8-4991-8c22-9961eb9a44d2
-
-#EXTINF: -1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/3/31/Ghostbusters_%282024%29_poster.jpg" tvg-logo-small="https://upload.wikimedia.org/wikipedia/en/3/31/Ghostbusters_%282024%29_poster.jpg", Ghostbusters: Frozen Empire (2024)
-
-#EXTINF: -1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/3/31/Ghostbusters_%282024%29_poster.jpg" tvg-logo-small="https://upload.wikimedia.org/wikipedia/en/3/31/Ghostbusters_%282024%29_poster.jpg", Ghostbusters: Frozen Empire (2024)
-#EXTGRP:TV
-https://pub-72e9bbf18fb0453f93911f5490ddab0a.r2.dev/GhostBusters-Frozen.Empire.2024.1080p.HDRip.Hindi.Clean.x264.1XBET.Vegamovies.To.mkv
+"LINK"
