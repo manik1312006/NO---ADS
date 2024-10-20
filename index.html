@@ -6,13 +6,15 @@
     <title>NO - ADS</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="https://firebasestorage.googleapis.com/v0/b/ip-tv-1312.appspot.com/o/fav.png?alt=media&token=89877107-a4ce-42c8-ab93-c39912399d96" type="image/x-icon">
-    <!-- MADE BY MANIK MEHTA -->
 </head>
 <body>
     <div class="container">
-         <h1>NO - ADS</h1>
-        <input type="text" id="videoLink" placeholder="Enter YouTube link here" />
+        <h1>NO - ADS</h1>
+        <input type="text" id="videoLink" placeholder="Enter YouTube video link" />
         <button onclick="embedVideo()">Get Video</button>
+        <br>
+        <input type="text" id="playlistLink" placeholder="Enter YouTube playlist link" />
+        <button onclick="embedPlaylist()">Get Playlist</button>
         <br>
         <h3>Note: It will not work on live videos</h3>
         <div class="video-container" id="videoContainer"></div>
