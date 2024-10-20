@@ -35,7 +35,7 @@ h1 {
 }
 
 input {
-   width: 100%;
+   width: 95%;
    transition: border-color 0.2s;
    color: black;
    font-size: larger;
