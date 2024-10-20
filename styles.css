@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background:black;
+    background: url(https://firebasestorage.googleapis.com/v0/b/ip-tv-1312.appspot.com/o/back.webp?alt=media&token=33278a0a-d357-47da-82b2-ed7831f5b086);
 }
 
 .container {
@@ -17,13 +17,13 @@ body {
     padding: 2rem, 2rem, 2rem, 2rem;
     margin: 2rem, 2rem, 2rem, 2rem;
     border-radius: 15px;
-    width: 100%;
-    height: 90%;
-    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(10px);
 }
 
 .container:hover {
