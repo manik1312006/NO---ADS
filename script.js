@@ -28,7 +28,7 @@ function extractVideoID(url) {
 
 // Function to embed a playlist
 function embedPlaylist() {
-    const link = document.getElementById('playlistLink').value;
+    const link = document.getElementById('videoLink').value;
     const playlistId = extractPlaylistID(link);
     const videoContainer = document.getElementById('videoContainer');
     videoContainer.innerHTML = ''; // Clear previous content

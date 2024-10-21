@@ -1,33 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: url(https://firebasestorage.googleapis.com/v0/b/ip-tv-1312.appspot.com/o/back.webp?alt=media&token=33278a0a-d357-47da-82b2-ed7831f5b086);
-}
-
-.container {
-    text-align: center;
-    transition: transform 0.2s;
-    color: white;
-    border: solid, 5px, rgb(214, 177, 248);
-    padding: 2rem, 2rem, 2rem, 2rem;
-    margin: 2rem, 2rem, 2rem, 2rem;
-    border-radius: 15px;
-    width: fit-content;
-    height: fit-content;
     display: flex;
     flex-direction: column;
+    background: black;
+    color: rgb(173, 238, 216);
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(10px);
-}
-
-.container:hover {
-    transform: scale(1.05);
 }
 
 h1 {
@@ -35,17 +14,17 @@ h1 {
 }
 
 input {
-   width: 95%;
-   transition: border-color 0.2s;
-   color: black;
-   font-size: larger;
-   padding: 10px 10px 10px 10px;
-   margin: 20px 10px 10px 10px;
-   border: none;
-   border-radius: 15px;
-   box-shadow: 50px 0px 100px rgb(0, 233, 213), -60px 0px 100px rgb(127, 7, 224);
-        }
+    width: 95%;
+    transition: border-color 0.2s;
+    color: black;
+    font-size: larger;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 10px 10px 10px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 50px 0px 100px rgb(0, 233, 213), -60px 0px 100px rgb(127, 7, 224);
 }
+
 
 input:focus {
     border-color: #007BFF;
@@ -53,8 +32,8 @@ input:focus {
 }
 
 input::placeholder {
-            color: rgb(214, 177, 248);
-        }
+    color: rgb(214, 177, 248);
+}
 
 button {
     background-color: rgb(214, 177, 248);
@@ -78,18 +57,18 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem ,2rem ,2rem ,2rem;
+    padding: 2rem, 2rem, 2rem, 2rem;
 }
 
 iframe {
     border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    box-shadow: 50px 0px 100px rgb(0, 233,   213), -60px 0px 100px rgb(127, 7, 224);
+    box-shadow: 50px 0px 100px rgb(0, 233, 213), -60px 0px 100px rgb(127, 7, 224);
 }
 
 @media screen and (max-width:875px) {
-            iframe {
-                width: 90vw;
-            }
-
+    iframe {
+        width: 90vw;
+    }
+}
