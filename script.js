@@ -1,4 +1,23 @@
+window.onload = function () {
+    const params = new URLSearchParams(window.location.search);
 
+    // Get shared URL (it could be in "url" or "text")
+    let sharedUrl = params.get("url") || params.get("text");
+
+    if (sharedUrl) {
+        sharedUrl = decodeURIComponent(sharedUrl.trim()); // Decode & clean up
+        document.getElementById("videoLink").value = sharedUrl;
+
+        // Auto-detect if it's a video or playlist and embed it
+        if (sharedUrl.includes("youtube.com") || sharedUrl.includes("youtu.be")) {
+            if (sharedUrl.includes("list=")) {
+                embedPlaylist(); // Auto-load playlist
+            } else {
+                embedVideo(); // Auto-load video
+            }
+        }
+    }
+};
 
 // Function to embed a video
 function embedVideo() {
@@ -21,15 +40,12 @@ function embedVideo() {
     }
 }
 
-
-
 // Function to extract video ID
 function extractVideoID(url) {
     const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed|live)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
     const match = url.match(regex);
     return match ? match[1] : null;
 }
-
 
 // Function to embed a playlist
 function embedPlaylist() {
@@ -50,7 +66,6 @@ function embedPlaylist() {
         alert('Please enter a valid YouTube playlist link.');
     }
 }
-
 
 // Function to extract playlist ID
 function extractPlaylistID(url) {
