@@ -74,6 +74,27 @@ function extractPlaylistID(url) {
     return match ? match[1] : null;
 }
 
+// Auto-enable PiP when app is minimized or screen is turned off
+document.addEventListener("visibilitychange", async () => {
+    let video = document.querySelector("iframe");
+
+    if (document.hidden && video) {
+        try {
+            if (document.pictureInPictureEnabled && !document.pictureInPictureElement) {
+                await video.requestPictureInPicture();
+            }
+        } catch (err) {
+            console.error("Error enabling PiP:", err);
+        }
+    } else if (!document.hidden && document.pictureInPictureElement) {
+        try {
+            await document.exitPictureInPicture();
+        } catch (err) {
+            console.error("Error exiting PiP:", err);
+        }
+    }
+});
+
 // Register Service Worker for offline caching
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/service-worker.js")
