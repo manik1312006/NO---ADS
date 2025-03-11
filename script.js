@@ -8,25 +8,33 @@ window.onload = function () {
         sharedUrl = decodeURIComponent(sharedUrl.trim()); // Decode & clean up
         document.getElementById("videoLink").value = sharedUrl;
 
-        // Auto-detect if it's a video or playlist and open in a new tab
+        // Auto-detect if it's a video or playlist and embed it
         if (sharedUrl.includes("youtube.com") || sharedUrl.includes("youtu.be")) {
             if (sharedUrl.includes("list=")) {
-                openPlaylistInNewTab(); // Open playlist in YouTube app
+                embedPlaylist(); // Auto-load playlist
             } else {
-                openVideoInNewTab(); // Open video in YouTube app
+                embedVideo(); // Auto-load video
             }
         }
     }
 };
 
-// Function to open video in YouTube app or new tab
-function openVideoInNewTab() {
+// Function to embed a video
+function embedVideo() {
     const link = document.getElementById("videoLink").value;
     const videoId = extractVideoID(link);
+    const videoContainer = document.getElementById("videoContainer");
+    videoContainer.innerHTML = ""; // Clear previous video
 
     if (videoId) {
-        const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
-        window.open(youtubeUrl, "_blank");
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube.com/embed/${videoId}`;
+        iframe.setAttribute("allowfullscreen", "true");
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+        iframe.width = "858";
+        iframe.height = "429";
+        videoContainer.appendChild(iframe);
     } else {
         alert("Please enter a valid YouTube link.");
     }
@@ -39,14 +47,21 @@ function extractVideoID(url) {
     return match ? match[1] : null;
 }
 
-// Function to open a playlist in YouTube
-function openPlaylistInNewTab() {
+// Function to embed a playlist
+function embedPlaylist() {
     const link = document.getElementById("videoLink").value;
     const playlistId = extractPlaylistID(link);
+    const videoContainer = document.getElementById("videoContainer");
+    videoContainer.innerHTML = ""; // Clear previous content
 
     if (playlistId) {
-        const youtubeUrl = `https://www.youtube.com/playlist?list=${playlistId}`;
-        window.open(youtubeUrl, "_blank");
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}`;
+        iframe.setAttribute("allowfullscreen", "true");
+        iframe.setAttribute("frameborder", "0");
+        iframe.width = "858";
+        iframe.height = "429";
+        videoContainer.appendChild(iframe);
     } else {
         alert("Please enter a valid YouTube playlist link.");
     }
@@ -58,17 +73,6 @@ function extractPlaylistID(url) {
     const match = url.match(regex);
     return match ? match[1] : null;
 }
-
-// Auto-open YouTube in PiP mode when app is minimized
-document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-        const link = document.getElementById("videoLink").value;
-        if (link.includes("youtube.com") || link.includes("youtu.be")) {
-            alert("Your video will continue playing in the YouTube app. Enable PiP manually.");
-            openVideoInNewTab();
-        }
-    }
-});
 
 // Register Service Worker for offline caching
 if ("serviceWorker" in navigator) {
