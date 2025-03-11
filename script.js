@@ -76,11 +76,14 @@ function extractPlaylistID(url) {
 
 // Auto-enable PiP when app is minimized or screen is turned off
 document.addEventListener("visibilitychange", async () => {
-    let video = document.querySelector("iframe");
+    let iframe = document.querySelector("iframe");
 
-    if (document.hidden && video) {
+    if (document.hidden && iframe) {
         try {
-            if (document.pictureInPictureEnabled && !document.pictureInPictureElement) {
+            let videoDocument = iframe.contentDocument || iframe.contentWindow.document;
+            let video = videoDocument.querySelector("video");
+
+            if (video && document.pictureInPictureEnabled && !document.pictureInPictureElement) {
                 await video.requestPictureInPicture();
             }
         } catch (err) {
@@ -100,4 +103,4 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/service-worker.js")
         .then(() => console.log("Service Worker Registered"))
         .catch((error) => console.log("Service Worker Registration Failed", error));
-}
+});
